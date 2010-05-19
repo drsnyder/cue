@@ -2,6 +2,9 @@
 require.paths.push(__dirname);
 require.paths.push(__dirname + '/lib');
 
+// match /queue[/status/]
+var queueRe = /^(\/\w+)([\/]{0,1}|\/status)[\/]{0,1}$/;
+
 var sys = require('sys'),
    http = require('http'),
    url = require('url'),
